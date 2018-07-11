@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div style="width:700px; background:#CCC; margin:0 auto; padding:20px">
+<script>
+var queryString = decodeURIComponent(window.location.search);
+queryString = queryString.substring(1);
+var queries = queryString.split("&");
+for( var i=0; i<queries.length; i++){
+	document.write(queries[i]+"<br/>");
+	
+	}
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div style="width:800px; background:#999; margin:0 auto;">
+<form action="display.html"; style="padding:30px;">
+<label>User Name:</label>
+<input type="text" name="username" required/><br/><br/>
+<label>Full Name:</label>
+<input type="text" name="fullame" required/><br/><br/>
+<label>Password:</label>
+<input type="number" name="password" required/><br/><br/>
+<label>Re-type Password:</label>
+<input type="number" name="passwordx" required/><br/><br/>
+<label>Gender:</label><br/>
+Male:<input type="radio" name="gender" value="male" required/><br/>
+FeMale:<input type="radio" name="gender"  vlue="female"required/><br/><br/>
+<label>completed sub:</label><br/>
+<input type="checkbox" name="sub" value="English"/>English<br/>
+<input type="checkbox" name="sub" value="Bangla"/>Bangla<br/>
+<input type="checkbox" name="sub" value="Arabic"/>Arabic<br/>
+<input type="checkbox" name="sub" value="Japanese"/>Japanese
+<br/>
+<br/>
+<br/>
+<label>Lnguage</label>
+<select name="language">
+<option value="English">English</option>
+<option value="Bangla">Bangla</option>
+<option value="Arabic">Arabic</option>
+<option value="Japanese">Japanese</option>
+</select>
+<br/>
+<br/>
+<label>comment:</label>
+<textarea name="comment"></textarea>
+<br/><br/>
+<input type="reset" value="Reset"/>
+<input type="submit" value="submit" onSubmit="SendFormData()"/>
+
+</form>
+</div>
+<script>
+function SendFormData(){
+	var value1 = "value1";
+	var value2 = "value2";
+	var value3 = "value3";
+	var value4 = "value4";
+	var value5 = "value5";
+	var value6 = "value6";
+	var value7 = "value7";
+	var value8 = "value8";
+	
+	
+	var queryString ="?para1= "+value1+	
+	"&para2= "+value2+
+	"&para3= "+value3+
+	"&para4= "+value4+
+	"&para5= "+value5+
+	"&para6= "+value6+
+	"&para7= "+value7+
+	"&para8= "+value8;
+window.location.href="display.html"+queryString;
+	}
+
+</script>
+</body>
+</html>
