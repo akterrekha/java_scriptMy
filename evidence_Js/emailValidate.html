@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+<style>
+	label{
+		color:red;
+		padding:5px;
+		}
+	input{
+		width:200px;
+		}
+	table {
+		border:10px;
+		border-color:red;
+		}
+	td{
+		border-color:red;
+		}
+</style>
+</head>
+
+<body>
+	<div style="background-color:CCC; margin:0 auto; padding:5px 10px; width:500px;">
+    	<form action="#" method="post" name="myForm" onSubmit="return validateForm();">
+        	<table>
+            	<tr>
+                	<td>User Name</td>
+                    <td>
+                    	<input type="text" name="uName">
+                        <label id="uNamee"></label>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td>Email</td>
+                    <td>
+                    	<input type="text" name="email">
+                        <label id="emaill"></label>
+                    </td>
+                </tr>
+                
+                 <tr>
+                	<td>Password</td>
+                    <td>
+                    	<input type="password" name="pass">
+                        <label id="passd"></label>
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td><input type="reset" name="Reset" value="Reset"></td>
+                    <td>
+                    	<input type="submit" name="Send" value="Send">
+                       
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+        
+        <script>
+        	function validateForm(){
+				var uName =document.forms["myForm"]["uName"].value;
+				var email =document.forms["myForm"]["email"].value;
+				var pass =document.forms["myForm"]["pass"].value;
+				
+				
+				if(uName==""){
+					document.getElementById("uNamee").innerHTML="Enter Name";
+					return false;
+					}
+					
+					else if(uName.length<3){
+					document.getElementById("uNamee").innerHTML="Enter must three length Name";
+					return false;
+					}
+					
+					
+					if(email==""){
+					document.getElementById("emaill").innerHTML="Enter Email";
+					return false;
+					}
+					
+					else if(email.indexOf("@",0)<0){
+					document.getElementById("emaill").innerHTML=" Please Enter @ Email";
+					return false;
+					}
+					else if(email.indexOf(".",0)<0){
+					document.getElementById("emaill").innerHTML=" Please Enter (.) Email";
+					return false;
+					}
+					
+					
+					if(pass==""){
+					document.getElementById("passd").innerHTML="Enter password";
+					return false;
+					}
+					if(pass.length<6){
+					document.getElementById("passd").innerHTML="Enter must be 6 digit password";
+					return false;
+					}
+					
+					
+					else{
+						document.write("Name :" + uName + "<br>");
+						document.write("Email :" + email + "<br>");
+						document.write("Password :" + pass + "<br>");
+						
+						}
+				}
+        </script>
+    </div>
+</body>
+</html>

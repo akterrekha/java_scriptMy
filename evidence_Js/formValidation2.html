@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+<style>
+	label{
+		color:red;
+		padding:5px;
+		}
+</style>
+</head>
+
+<body>
+<div style="width:500px; background-color:#CCC; margin:0 auto; padding:5px 10px;">
+	<form name="myForm" method="post" action="#" onSubmit="return valiteForm();">
+    	<table>
+        	<tr>
+            	<td>Name</td>
+                <td>
+                <input type="text" name="name">
+                <label id="namee"></label>
+              </td>
+            </tr>
+            
+            <tr>
+            	<td>ID</td>
+            	<td>
+                <input type="number" name="id" min="100" max="300">
+                <label id="idd"></label>
+                </td>
+                
+          </tr>
+            
+            
+            <tr>
+            	<td>Gender</td>
+                <td>
+                <input type="radio" name="gender" value="male">Male
+                 <input type="radio" name="gender" value="female">Female
+                 <label id="genderr"></label>
+                </td>
+            </tr>
+            
+            <tr>
+            	<td>Email</td>
+                <td>
+                <input type="text" name="email">
+                <label id="emaill"></label>
+              </td>
+              
+              <tr>
+            	<td>Password</td>
+                <td>
+                <input type="password" name="pass">
+                <label id="passd"></label>
+              </td>
+            
+            
+            <tr>
+            	<td><input type="submit" value="Send"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+            
+        </table>
+    </form>
+    
+  <script>
+    	function valiteForm(){
+			var name = document.forms["myForm"]["name"].value;
+			var id = document.forms["myForm"]["id"].value;
+			var gender = document.forms["myForm"]["gender"].value;
+			var email = document.forms["myForm"]["email"].value;
+			var pass = document.forms["myForm"]["pass"].value;
+		
+			
+			
+			if(name==""){
+				document.getElementById("namee").innerHTML="Enter name";
+				return false;
+				}
+				else if(name.length<4){
+					document.getElementById("namee").innerHTML="Enter name";
+					return false;	
+					}
+					
+			if(id==""){
+				document.getElementById("idd").innerHTML="Enter id";
+				}
+				
+				if(gender==""){
+				document.getElementById("genderr").innerHTML="Select Gender";
+				return false;
+				}
+				
+				if(email==""){
+				document.getElementById("emaill").innerHTML="Enter Email";
+				return false;
+				}
+				else if(email.indexOf("@",0)<0){
+				document.getElementById("emaill").innerHTML="Enter @ Email";
+				return false;
+				}
+				
+				else if(email.indexOf(".",0)<0){
+				document.getElementById("emaill").innerHTML="Enter addredd not validate Email";
+				return false;
+				}
+				
+				if(pass==""){
+				document.getElementById("passd").innerHTML="Enter Password";
+				return false;
+				}
+				else if(pass.length<6){
+				document.getElementById("passd").innerHTML="Enter Password";
+				return false;
+				}
+					
+					
+					
+					else{
+						document.write("Name:" + " " + name + "<br>");
+						document.write("ID:" + " " + id + "<br>");
+						document.write("Genger:" + " " + gender + "<br>");
+						document.write("Email:" + " " + email + "<br>");
+						document.write("Password:" + " " + pass + "<br>");
+						
+						}
+			}
+    </script>
+</div>
+</body>
+</html>
