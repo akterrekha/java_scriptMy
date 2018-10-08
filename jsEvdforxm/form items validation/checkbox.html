@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+label{
+	color:#900;
+	padding-left:10px;
+	}
+</style>
+</head>
+
+<body>
+
+<form name="myForm" onSubmit="return Validate()" action="checkbox.html" method="post">
+Gender : <input type="checkbox" name="ssc" value="SSC">SSC
+
+		<input type="checkbox" name="hsc" value="HSC">HSC
+        
+        <input type="checkbox" name="bsc" value="BSc">BSc<label id="edu"></label><br/><br/>
+        
+        <input type="submit" value="Submit"><input type="reset" value="Reset">
+</form>
+
+
+<script>
+function Validate(){
+	var edu ="";
+	var ssc = document.forms["myForm"]["ssc"].value;
+	var hsc = document.forms["myForm"]["hsc"].value;
+	var bsc = document.forms["myForm"]["bsc"].value;
+	
+	if(document.forms["myForm"].ssc.checked){
+		edu += ssc + ",";
+		}
+	if(document.forms["myForm"].hsc.checked){
+		edu += hsc + ",";
+		}
+	if(document.forms["myForm"].bsc.checked){
+		edu += bsc;
+		}
+		
+		
+	if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked && !document.forms["myForm"].bsc.checked){
+		document.getElementById('edu').innerHTML = "Please select at least one";
+		return false;
+		}
+	else{
+		document.write("Education: " + edu + "<br/>");
+		}
+	}
+</script>
+</body>
+</html>

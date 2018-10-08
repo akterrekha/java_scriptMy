@@ -1,0 +1,32 @@
+<!DOCTYPE html 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><script>
+///make a simple function
+var sum=0;
+function dosum(startingNumber,endingNumber){
+	if(startingNumber<=endingNumber){
+		while(startingNumber<=endingNumber){
+			sum +=startingNumber;
+			startingNumber++;
+			}
+		}else{
+			while(startingNumber >=endingNumber){
+			sum +=startingNumber--;	
+				}
+				
+		}
+		return sum;
+	}
+var sn=parseInt(promt("Enter First Number",""));
+var sn=parseInt(promt("Enter Last Number",""));
+document.write(doSum(sn,en));
+
+
+
+</script>
+</body>
+</html>

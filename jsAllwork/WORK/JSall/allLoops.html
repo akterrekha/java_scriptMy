@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+<body>
+<h1>sum using different loops</h1>
+<script>
+var sum =0; var StartingNumber =1;
+var endingNumber = 10;
+while(StartingNumber <= endingNumber){
+	sum += StartingNumber;
+	StartingNumber++;
+	}
+document.write("sum using while loop: " +sum);
+document.write("<hr/>");
+///for loop////
+var sum2 =0;
+var sn = 1;
+var en = 10;
+for (sn; sn <= en; sn++){
+	sum2 += sn;
+	}
+document.write("sum using for loop:" + sum2);
+document.write("<hr/>");
+/////do while loop/////
+var sum3 = 0;
+var firstNumber = 1;
+var lastNumber = 10;
+do {
+	sum3 += firstNumber;
+	firstNumber ++;
+	}
+while(firstNumber <= lastNumber);
+document.write("sum using do while loop: " +sum3);
+document.write("<hr/>");
+///for in loop/////
+var numbers = [1,2,3,4,5,6,7,8,9,10];
+var sum4 = 0;
+for(var i in numbers){
+	sum4 += numbers[i];
+	}
+document.write("sum using for in loop: " +sum4);
+document.write("<hr/>");
+////word dia practise/////
+var students = ['doly', 'moly', 'poly', 'koly', 'joly', 'holy'];
+for(var i in students){
+if(students[i]=='doly' || students[i] == 'moly'){
+	continue;
+	}
+	document.write(students[i] +"<br/>");
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

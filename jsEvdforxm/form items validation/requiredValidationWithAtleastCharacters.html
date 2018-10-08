@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+label{
+	color:#900;
+	padding-left: 10px;
+	}
+</style>
+</head>
+
+<body>
+<form name="myForm" action="requiredValidationWithAtleastCharacters.html" method="post" onSubmit="return validate()">
+
+Firstname:<input type="text" name="fname"/><label id="fname"></label><br/><br/>
+
+<input type="submit" value="Submit"/><input type="reset" value="Reset"/>
+
+
+<script>
+function validate(){
+	var fname=document.forms["myForm"]["fname"].value;
+	
+	if(fname==""){
+		document.getElementById('fname').innerHTML = "Name field can not be empty";
+		return false;
+		}
+	else if(fname.length<5){
+		document.getElementById('fname').innerHTML = "Name must be at least 5 characters";
+		return false;
+		}
+	else{
+		document.write("First Name: " + fname + "<br/>");
+		}
+	
+	}
+</script>
+</form>
+
+</body>
+</html>

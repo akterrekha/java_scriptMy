@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div style="width: 600px; background: #3cc; padding: 20px;">
+<form action="display.html" style="padding:20px;">
+<label>Name</label>
+<input type="text" name="Name" required/><br/>
+<label>Gender</label>
+Male:<input type="radio" name="Gender" value="Male" required/><br/>
+Female:<input type="radio" name="Gender" value="Female" required/><br/>
+<label>Round</label>
+<select name="Round">
+<option value="Round-32">Round-32</option>
+<option value="Round-33">Round-33</option>
+<option value="Round-34">Round-34</option>
+<option value="Round-35">Round-35</option>
+<option value="Round-36">Round-36</option>
+<option value="Round-37">Round-37</option>
+<option value="Round-38">Round-38</option>
+<option value="Round-39">Round-39</option>
+</select><br/>
+<label>Completed sub:</label>
+HTML: <input type="checkbox" name="sub" value="HTML"/>
+PPT: <input type="checkbox" name="sub" value="PPT"/>
+JS: <input type="checkbox" name="sub" value="JS"/>
+<br/><br/>
+<input type="submit" value="Send" onsubmit="SendFormData()"/>
+<input type="reset" value="Clear form"/>
+
+</form>
+</div>
+<script>
+      function SendFormData() {
+          var value1 = "value1";
+		  var value2 = "value2";
+          var value3 = "value3";
+		  var value4 = "value4";
+		  var value5 = "value5";
+          var queryString = "?para1= " + value1 + "&para2= " + value2 + "&para3= " + value3 + "&para4= " + value4 + "&para5= " + value5;
+                window.location.href = "display.html" + queryString;
+	  }
+</script>
+
+
+</body>
+</html>

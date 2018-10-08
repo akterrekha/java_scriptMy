@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+label{
+	color:#900;
+	padding-left:10px;
+	}
+</style>
+</head>
+
+<body>
+
+<form name="myForm" onSubmit="return Validate()" action="radiobox.html" method="post">
+Gender : <input type="radio" name="gender" value="Male">Male
+
+		<input type="radio" name="gender" value="Female">Female<label id="gender"></label><br/><br/>
+        
+        <input type="submit" value="Submit"><input type="reset" value="Reset">
+</form>
+
+
+<script>
+function Validate(){
+	
+	var gender = document.forms["myForm"]["gender"].value;
+	
+	if(gender==""){
+		document.getElementById('gender').innerHTML = "Tell me who you are? ";
+		return false;
+		}
+	else{
+		document.write("Gender: " + gender + "<br/>");
+		}
+	}
+</script>
+</body>
+</html>

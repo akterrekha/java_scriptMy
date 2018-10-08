@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>timing method</title>
+</head>
+
+<body>
+<script>
+function GetStanWin(){
+	open("sampWin.html","sampWin1","toolbar=no,width=200,height=150")
+	//width=640,height=460 recomendeddesign size
+	}
+function moveRel(){
+	moveBy(20,20)
+	}
+function moveAbs(){
+	moveTo(20,20)
+	}
+	function shrink(){
+	resizeBy(15,10)
+	}
+	function shrivel(){
+	resizeTo(400,300);
+	}
+</script> 
+<center>
+<p>
+<h2>Window control</h2>
+<form>
+<input type="button" name="openBut" value="click to open new window" onClick="GetStanWin()"><p>
+<input type="button" name="mvbyBut" value="click to move relative."  onClick="moveRel()"><p>
+<input type="button" name="moveToBut" value="click to move absolute." onClick="moveAbs()"><p>
+<input type="button" name="shrinkBut" value="click to change relative size." onClick="shrink()"><p>
+<input type="button" name="shrivelBut" value="click to change absolute size." onClick="shrivel()"><p>
+
+
+</center>
+</form>
+
+
+</p>
+
+
+
+
+
+</body>
+</html>

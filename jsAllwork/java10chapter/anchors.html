@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>anchors and Hashes</title>
+
+<style>
+body{
+	background-color:#d9e6cc;
+	font-family:Verdana;
+    }
+	h2{
+		font-size:24pt;
+		color:#ff0040;
+	    }
+		h3{
+			font-size:16pt;
+		color:#008080;
+			}
+			a{color:#e68026; font-size:10; font-weight:bold;}
+</style>
+<script>
+function countAnchors(){
+	alert("This script has"+document.anchors.length + "anchors.");
+	}
+	function goAnchors(anchName){
+		location,has=anchName;
+		
+		}
+
+</script>
+
+
+</head>
+
+<body onLoad="countAnchors()">
+<p>
+<h2>Top Level<a name="top"</h2>
+<a href="#" onMouseDown="goAnchors('one')">one</a>|
+<a href="#" onMouseOut="goAnchors('two')">two</a>|
+<a href="#" onMouseMove="goAnchors('three')">three</a>|
+<a href="#" onMouseOver="goAnchors('four')">four</a>
+<p>
+<p><hr><hr>
+<p>
+<h3>Level One<a name="one"></a></h3>
+<p><hr><hr>
+<p>
+<h3>Level Two<a name="two"></a></h3>
+<p><hr><hr>
+<p>
+<h3>Level Three<a name="three"></a></h3>
+<p><hr><hr><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/><BR/>
+<p><a href="#" onMouseUp="goAnchors('top')">top</a>
+<h3>Level Four<a name="four"></a></h3>
+
+</body>
+</html>

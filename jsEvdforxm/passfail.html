@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+
+function passFail(){
+var e = 25;
+var w = 89;
+
+	if((e<0 || e>50)||(w<0 || w>100)){
+		document.write("Invalidate number enter");
+		return false;
+		}else if((e<30)||(w<70)){
+			document.write("fail");
+			return false;
+			}else{
+				document.write("Pass");
+				}
+	}
+	 
+passFail();
+</script>
+</body>
+</html>

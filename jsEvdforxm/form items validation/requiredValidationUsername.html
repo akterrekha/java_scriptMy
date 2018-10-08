@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<form name="myForm" action="requiredValidationUsername.html" method="post" onSubmit="return validate()">
+
+Username:<input type="text" name="uname" /><label id="uname"></label><br/><br/>
+<input type="submit" value="Submit"/><input type="reset" value="Reset"/>
+
+</form>
+
+<script>
+function validate(){
+	var uname = document.forms["myForm"]["uname"].value;
+	
+	var reg = /^\w+$/;
+	
+	if(uname==""){
+		document.getElementById('uname').innerHTML = "Username can not be epmpty";
+		return false;
+		}
+		
+	else if(!reg.test(uname)){
+		document.getElementById('uname').innerHTML = "Username can contain only Uppercase or Lowercase, numeric and underscore";
+		return false;
+		}
+		
+	else{
+		document.write("User name: " + uname + "<br/>");
+		}
+	
+	}
+
+</script>
+</body>
+</html>

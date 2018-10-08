@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+var display="<h3>"+self.name +"</h3>";
+  display +="<div class='bod'>";
+  var gone="";
+  var alpha=self.closed;
+  if(alpha==false){
+	  var gone="never";
+	  }
+     display+="this window has"+gone+"been closed.<br>";
+	 self.defaltStatus="\"this window property can be changed.\"";
+	 display+="the default status reads:"+defaltStatus +"<br></div>";
+   document.write(display);
+
+
+
+
+
+</script>
+<a href="dummy.html">Go Dummy</a>;
+
+</body>
+</html>

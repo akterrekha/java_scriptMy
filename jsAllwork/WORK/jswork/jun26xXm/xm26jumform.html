@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div style="width:700px;background:#366; padding:30px">
+<form action="display.html"; style="padding:30px;">
+<label>ID</label>
+<input type="number" name="ID" required/><br/>
+<label>Name</label>
+<input type="text" name="Name" required/><br/>
+<label>Gender</label>
+Male:<input type="radio" name="Gender" value="Male" required/><br/>
+Female:<input type="radio" name="Gender" value="Female" required/><br/>
+<label>Round</label>
+<select name="Round">
+<option value="Round-34">Round-34</option>
+<option value="Round-35">Round-35</option>
+<option value="Round-36">Round-36</option>
+<option value="Round-37">Round-37</option>
+<option value="Round-38">Round-38</option>
+<option value="Round-39">Round-39</option>
+</select><br/>
+<label>completed sub:</label>
+HTML: <input type="checkbox" name="sub" value="HTML"/>
+PPT: <input type="checkbox" name="sub" value="PPT"/>
+Bootstrap: <input type="checkbox" name="sub" value="Bootstrap"/>
+<br/><br/>
+<input type="submit" value="Send" onsubmit="SendFormData()"/>
+<input type="reset" value="Reset"/>
+</form>
+
+</body>
+</html>

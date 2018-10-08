@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+<script>
+function checkItOut(form){
+	var yourName=document.folks.info.value;
+	if(yourName==""){
+		aler("you know your name don\'t you?\n So typeit in!");
+		return false;
+		}else{
+			alert("Thanks,"+yourName+" for sending in your name");
+			return true;
+			
+			}
+	
+	}
+
+</script>
+<form name="folks" onSubmit="return checkItOut(this)">
+Your Name Please:
+<input type="text" name="info"><p>
+<input type="submit" value="Click to validate and submit">
+</form>
+
+
+</body>
+</html>
